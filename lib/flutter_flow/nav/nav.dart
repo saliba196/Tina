@@ -37,19 +37,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, _) => const PaginaRealWidget(),
         ),
         FFRoute(
-          name: 'HomePage',
-          path: '/homePage',
-          builder: (context, params) => const HomePageWidget(),
-        ),
-        FFRoute(
           name: 'PaginaReal',
           path: '/paginaReal',
           builder: (context, params) => const PaginaRealWidget(),
-        ),
-        FFRoute(
-          name: 'contato',
-          path: '/contato',
-          builder: (context, params) => const ContatoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
